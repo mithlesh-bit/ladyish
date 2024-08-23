@@ -94,7 +94,7 @@ exports.signUp = async (req, res) => {
 
     // Save changes or new user
     await user.save();
-    sendMail(
+    await sendMail(
       transporter,
       body.name,
       body.email,
@@ -137,7 +137,7 @@ exports.signIn = async (req, res) => {
       { _id: user._id },
       { $set: { otp: otp, otpExpires: new Date(Date.now() + 300000) } }
     );
-    sendMail(
+    await sendMail(
       transporter,
       user.name,
       req.body.email,
