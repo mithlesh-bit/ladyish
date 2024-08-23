@@ -20,7 +20,7 @@ const Page = () => {
     const fetchDesigns = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_BASE_URL}/corousel/get-corousel`
+          `${process.env.NEXT_PUBLIC_BASE_URL}corousel/get-corousel`
         ); // Replace with your API endpoint
         if (!response.ok) {
           throw new Error("Failed to fetch designs");
