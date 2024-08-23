@@ -36,7 +36,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://ladyishserver-mu.vercel.app", // Adjust to match your frontend URL
+    origin: "https://ladyish-eight.vercel.app", // Adjust to match your frontend URL
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE","HEAD","OPTIONS"], // Methods allowed for CORS
     credentials: true, // Allow cookies and authorization headers with requests
     allowedHeaders: [
